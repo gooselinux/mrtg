@@ -1,0 +1,11 @@
+--- mrtg-2.10.5/Makefile.in.lr	2003-10-25 09:09:18.000000000 +0200
++++ mrtg-2.10.5/Makefile.in	2003-10-25 09:09:38.000000000 +0200
+@@ -30,7 +30,7 @@
+ all:	 bin/rateup subst
+ 
+ bin/rateup: bin/rateup.o
+-	LD_RUN_PATH=$(LD_RUN_PATH) $(CC) bin/rateup.o -o bin/rateup $(LDFLAGS)  $(LIBS) 
++	$(CC) bin/rateup.o -o bin/rateup $(LDFLAGS)  $(LIBS) 
+ 
+ bin/rateup.o: $(top_srcdir)/src/rateup.c
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $(top_srcdir)/src/rateup.c -o bin/rateup.o
